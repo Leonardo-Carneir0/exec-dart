@@ -6,7 +6,7 @@ int somaLista(List<int> numeros) {
   return soma;
 }
 
-main() {
+void main() {
   List<int> numeros = [1, 2, 3, 4, 5, 6, 7, 29];
   int resultado = somaLista(numeros);
   print(resultado);
