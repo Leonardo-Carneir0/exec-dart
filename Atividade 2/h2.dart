@@ -1,14 +1,16 @@
-int maiorNumero(List<int> numeros) {
-  int maior = numeros[0];
-  for (int numero in numeros) {
-    if (numero > maior) {
-      maior = numero;
+int encontrarMaiorNumero(List<int> listaDeNumeros) {
+  int maiorNumero = listaDeNumeros[0];
+
+  for (int numeroAtual in listaDeNumeros) {
+    if (numeroAtual > maiorNumero) {
+      maiorNumero = numeroAtual;
     }
   }
-  return maior;
+
+  return maiorNumero;
 }
 
 void main() {
-  List<int> listaNumeros = [1, 2, 3, 45, 454, 645, 6746];
-  print('Maior número: ${maiorNumero(listaNumeros)}');
+  List<int> numeros = [1, 2, 3, 45, 454, 645, 6746];
+  print('Maior número: ${encontrarMaiorNumero(numeros)}');
 }

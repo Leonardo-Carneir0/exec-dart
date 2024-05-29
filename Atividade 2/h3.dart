@@ -6,6 +6,6 @@ int fatorial(int n) {
 }
 
 void main(){  
-  int numeroFatorial = 20;
+  int numeroFatorial = 5;
   print('Fatorial de $numeroFatorial: ${fatorial(numeroFatorial)}');
 }
