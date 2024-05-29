@@ -6,28 +6,32 @@ class Livro {
 
   Livro(this.titulo, this.autor, this.numeroPaginas);
 
-  void emprestar () {
+  void emprestar() {
     if (_estaDisponivel) {
       _estaDisponivel = false;
       print('O livro "$titulo" foi emprestado.');
-    }else{
+    } else {
       print('O livro "$titulo" não está disponível para empréstimo');
     }
   }
-  void devolver(){
-    if (!_estaDisponivel){
+
+  void devolver() {
+    if (!_estaDisponivel) {
       _estaDisponivel = true;
       print('O livro" $titulo" "já esta disponível na biblioteca.');
     }
   }
-  bool estaDisponivel() {
+
+  bool esta_Disponivel() {
     return _estaDisponivel;
   }
 }
+
 void main() {
   Livro livro = Livro('1984', 'George Orwell', 328);
 
-  print('O livro "${livro.titulo}" está disponível? ${livro.estaDisponivel()}');
+  print(
+      'O livro "${livro.titulo}" está disponível? ${livro.esta_Disponivel()}');
 
   livro.emprestar();
 
@@ -37,9 +41,6 @@ void main() {
 
   livro.devolver();
 
-  print('O livro "${livro.titulo}" está disponível? ${livro.estaDisponivel()}');
+  print(
+      'O livro "${livro.titulo}" está disponível? ${livro.esta_Disponivel()}');
 }
-
-
-
-
